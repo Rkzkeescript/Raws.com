@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raws.com | Premium Cheats & Scripts</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        raws: {
+                            purple: '#a855f7',
+                            darkPurple: '#7e22ce',
+                            bg: '#050508',
+                            card: '#0f0f15'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased min-h-screen relative">
+    <div class="particles"></div>
+
+    <!-- Navbar -->
+    <nav class="glass border-b border-white/5 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
+                    <div class="text-3xl font-extrabold text-[#a855f7] group-hover:animate-pulse">
+                        <i class="fa-solid fa-dragon"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-wide">Raws<span class="text-[#a855f7]">.com</span></span>
+                </div>
+
+                <!-- Nav Links -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-[#a855f7] flex items-center gap-2 font-semibold hover:text-white transition"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="#games" class="text-gray-400 flex items-center gap-2 font-semibold hover:text-white transition"><i class="fa-solid fa-gamepad"></i> Games</a>
+                    <a href="https://discord.gg/getraws" target="_blank" class="text-gray-400 flex items-center gap-2 font-semibold hover:text-white transition"><i class="fa-brands fa-discord"></i> Discord</a>
+                </div>
+
+                <!-- Developer Name -->
+                <div class="flex items-center gap-3">
+                    <div class="text-right flex flex-col justify-center">
+                        <p class="text-[10px] text-gray-400 uppercase tracking-wider leading-tight">Owner / Developer</p>
+                        <p class="text-sm font-bold text-[#a855f7] leading-tight drop-shadow-[0_0_8px_rgba(168,85,247,0.8)]">Drake / NK5M</p>
+                    </div>
+                    <div class="relative w-11 h-11 flex items-center justify-center">
+                        <div class="absolute inset-0 rounded-full avatar-ring"></div>
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#a855f7] to-[#7e22ce] flex items-center justify-center text-lg font-extrabold avatar-glow z-10">
+                            D
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row gap-8 relative z-10">
+        
+        <!-- Sidebar (Menu Only) -->
+        <aside class="w-full md:w-64 flex-shrink-0 space-y-2">
+            <h3 class="text-gray-400 font-bold uppercase text-xs tracking-wider mb-4 px-4"><i class="fa-solid fa-layer-group mr-2"></i> Menu</h3>
+            <a href="#" class="sidebar-item active flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition bg-white/5 text-[#a855f7] border-l-4 border-[#a855f7]"><i class="fa-solid fa-star"></i> All Products</a>
+            <a href="#scripts" class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-gray-400 hover:bg-white/5 transition"><i class="fa-solid fa-code"></i> Scripts</a>
+            <a href="#executors" class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-gray-400 hover:bg-white/5 transition"><i class="fa-solid fa-microchip"></i> Executors</a>
+            <a href="#games" class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-gray-400 hover:bg-white/5 transition"><i class="fa-solid fa-gamepad"></i> Supported Games</a>
+            <a href="#premium" class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-gray-400 hover:bg-white/5 transition"><i class="fa-solid fa-crown"></i> Premium</a>
+        </aside>
+
+        <!-- Main Area (Content) -->
+        <main class="flex-1 space-y-12">
+            
+            <!-- Hero Banner -->
+            <div class="relative w-full h-80 md:h-96 rounded-3xl overflow-hidden glass border border-white/10 group flex items-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#050508] via-[#050508]/90 to-transparent z-10"></div>
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" alt="Hero Bg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition duration-1000">
+                
+                <div class="relative z-20 p-8 md:p-12 w-full">
+                    <h1 class="text-4xl md:text-6xl font-extrabold mb-3 drop-shadow-lg">Raws<span class="text-[#a855f7]">Hub</span></h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-6 font-medium">Premium Cheats & Scripts for Roblox</p>
+                    
+                    <div class="flex flex-wrap items-center gap-4 md:gap-6 text-sm text-gray-300 mb-8">
+                        <span class="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10"><i class="fa-solid fa-check-circle text-[#a855f7]"></i> 100% Safe</span>
+                        <span class="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10"><i class="fa-solid fa-bolt text-[#a855f7]"></i> Fast Delivery</span>
+                        <span class="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full border border-white/10"><i class="fa-solid fa-shield-halved text-[#a855f7]"></i> Trusted</span>
+                    </div>
+                    
+                    <a href="#scripts" class="btn-gradient text-white px-8 py-3 rounded-full font-bold w-max flex items-center gap-2">
+                        <i class="fa-solid fa-cart-shopping"></i> Get Script <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MAIN SCRIPT SECTION -->
+            <div id="scripts" class="glass rounded-2xl p-6 border border-[#a855f7]/30 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-[#a855f7] blur-[80px] opacity-20 pointer-events-none"></div>
+                
+                <div class="flex items-center justify-between mb-4 relative z-10">
+                    <h2 class="text-xl font-bold flex items-center gap-2"><i class="fa-solid fa-code text-[#a855f7]"></i> MAIN Script</h2>
+                    <span class="text-xs bg-[#a855f7]/20 text-[#a855f7] px-3 py-1 rounded-full border border-[#a855f7]/50">Updated</span>
+                </div>
+                <p class="text-gray-400 text-sm mb-4 relative z-10">Copy the script below and paste it into your executor.</p>
+                
+                <div class="script-box rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+                    <code class="script-code text-sm md:text-base flex-1" id="mainScriptCode">loadstring(game:HttpGet("https://pastebin.com/raw/qpqzY8dw"))()</code>
+                    <button id="copyBtn" class="btn-gradient text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 whitespace-nowrap transition-all duration-300">
+                        <i class="fa-regular fa-copy" id="copyIcon"></i> <span id="copyText">Copy Script</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- SUPPORTED EXECUTORS -->
+            <div id="executors">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2"><i class="fa-solid fa-microchip text-[#a855f7]"></i> Supported Executors</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Mobile -->
+                    <div class="product-card rounded-xl p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
+                            <i class="fa-solid fa-mobile-screen text-xl text-[#a855f7]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Delta</h3>
+                            <p class="text-xs text-gray-400">Mobile</p>
+                        </div>
+                        <span class="ml-auto text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">Working</span>
+                    </div>
+
+                    <div class="product-card rounded-xl p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
+                            <i class="fa-solid fa-mobile-screen text-xl text-[#a855f7]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Xeno</h3>
+                            <p class="text-xs text-gray-400">Mobile</p>
+                        </div>
+                        <span class="ml-auto text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">Working</span>
+                    </div>
+
+                    <!-- PC -->
+                    <div class="product-card rounded-xl p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
+                            <i class="fa-solid fa-desktop text-xl text-[#a855f7]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Wave</h3>
+                            <p class="text-xs text-gray-400">PC</p>
+                        </div>
+                        <span class="ml-auto text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">Working</span>
+                    </div>
+
+                    <div class="product-card rounded-xl p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
+                            <i class="fa-solid fa-desktop text-xl text-[#a855f7]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Solara</h3>
+                            <p class="text-xs text-gray-400">PC</p>
+                        </div>
+                        <span class="ml-auto text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">Working</span>
+                    </div>
+
+                    <div class="product-card rounded-xl p-5 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
+                            <i class="fa-solid fa-desktop text-xl text-[#a855f7]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">Swift</h3>
+                            <p class="text-xs text-gray-400">PC</p>
+                        </div>
+                        <span class="ml-auto text-xs font-bold text-green-400 bg-green-400/10 px-2 py-1 rounded border border-green-400/20">Working</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUPPORTED GAMES -->
+            <div id="games" class="glass rounded-2xl p-6 border border-white/5">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold flex items-center gap-2"><i class="fa-solid fa-gamepad text-[#a855f7]"></i> Supported Games</h2>
+                </div>
+                
+                <p class="text-gray-400 text-sm mb-6">Script compatibility list for Da Hood and its remakes.</p>
+
+                <div class="flex flex-wrap gap-3 md:gap-6 mb-6 text-xs md:text-sm bg-black/40 p-4 rounded-lg w-full md:w-max border border-white/5">
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-green-500 shadow-[0_0_8px_#22c55e]"></span> Working</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-yellow-500 shadow-[0_0_8px_#eab308]"></span> Needs Update</div>
+                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-red-500 shadow-[0_0_8px_#ef4444]"></span> Need to Recontinue</div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-[#0f0f15] p-4 rounded-lg border border-white/5 gap-3 hover:border-[#a855f7]/30 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
+                                <i class="fa-solid fa-gamepad text-gray-400 text-sm"></i>
+                            </div>
+                            <span class="font-semibold text-sm">Da Hood</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs font-bold text-green-400 bg-green-400/10 px-3 py-1 rounded-full border border-green-400/20 w-max">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Working
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-[#0f0f15] p-4 rounded-lg border border-white/5 gap-3 hover:border-[#a855f7]/30 transition">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center">
+                                <i class="fa-solid fa-gamepad text-gray-400 text-sm"></i>
+                            </div>
+                            <span class="font-semibold text-sm">Da Hood Remake</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs font-bold text-green-400 bg-green-400/10 px-3 py-1 rounded-full border border-green-400/20 w-max">
+                            <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Working
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DISCORD CONNECT BOXES -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Contact Box -->
+                <div class="glass rounded-2xl p-6 border border-white/5 text-center flex flex-col items-center justify-center glow-purple">
+                    <i class="fa-brands fa-discord text-4xl text-[#5865F2] mb-4 animate-float"></i>
+                    <p class="text-sm text-gray-300 mb-6 leading-relaxed max-w-xs mx-auto">Kindly DM on Discord server on there and create a ticket for any problem.</p>
+                    <a href="https://discord.com/users/1560630352278716446" target="_blank" class="w-full bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-bold py-3 rounded-lg transition shadow-lg shadow-[#5865F2]/30">Message Drake</a>
+                </div>
+
+                <!-- Discord Server Box -->
+                <div class="glass rounded-2xl p-6 border border-[#a855f7]/30 text-center flex flex-col items-center justify-center">
+                    <h4 class="text-lg font-bold text-white mb-2">Join Our Server</h4>
+                    <p class="text-sm text-gray-400 mb-6">Get the latest updates and support from the community.</p>
+                    <a href="https://discord.gg/getraws" target="_blank" class="w-full btn-gradient text-white text-sm font-bold py-3 rounded-lg transition">Join Discord Server</a>
+                </div>
+            </div>
+
+            <!-- PREMIUM CHEATS & CONFIGS -->
+            <div id="premium" class="space-y-6">
+                
+                <!-- Premium Cheats -->
+                <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1a0b2e] to-[#0f0f15] border border-[#a855f7]/30 p-8 md:p-12 text-center group">
+                    <div class="absolute -top-24 -right-24 w-48 h-48 bg-[#a855f7] rounded-full blur-[100px] opacity-30 group-hover:opacity-50 transition duration-700"></div>
+                    
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div class="w-20 h-20 bg-[#5865F2] rounded-full flex items-center justify-center text-4xl mb-6 shadow-[0_0_30px_rgba(88,101,242,0.5)] animate-float">
+                            <i class="fa-brands fa-discord text-white"></i>
+                        </div>
+                        <h2 class="text-3xl font-extrabold mb-3">Premium Cheats</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto mb-8 text-base md:text-lg">
+                            Get access to the exclusive, private version of the script with enhanced features.
+                            <br><br>
+                            <span class="text-white font-semibold">How to get?</span> Join our Discord Server and <strong class="text-[#a855f7]">create a ticket</strong> to purchase your access.
+                        </p>
+                        <a href="https://discord.gg/getraws" target="_blank" class="btn-gradient text-white px-8 py-4 rounded-full font-bold text-lg flex items-center gap-3">
+                            <i class="fa-solid fa-ticket"></i> Create a Ticket
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Configs Offer -->
+                <div class="glass rounded-2xl p-6 md:p-8 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div class="flex flex-col md:flex-row items-center gap-6 relative z-10 text-center md:text-left">
+                        <div class="w-16 h-16 rounded-full bg-[#a855f7]/10 border border-[#a855f7]/30 flex items-center justify-center text-3xl text-[#a855f7] shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Premium Prediction Configs</h3>
+                            <p class="text-gray-400 text-sm max-w-md">High-quality, accurate prediction sets and configurations for the MAIN script to improve your gameplay performance.</p>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-right relative z-10 mt-4 md:mt-0 bg-white/5 px-6 py-4 rounded-xl border border-white/10 w-full md:w-auto">
+                        <span class="text-[#a855f7] font-bold text-lg block mb-1">Available</span>
+                        <p class="text-xs text-gray-400">Contact Drake/NK5M</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass border-t border-white/5 mt-12 py-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <div class="text-2xl font-extrabold text-[#a855f7]"><i class="fa-solid fa-dragon"></i></div>
+                <span class="text-xl font-bold text-white">Raws<span class="text-[#a855f7]">.com</span></span>
+            </div>
+            <p class="text-gray-500 text-sm italic">"Cheat Smarter. Play Better."</p>
+            <div class="flex gap-4 text-gray-400 text-xl">
+                <a href="https://discord.gg/getraws" target="_blank" class="hover:text-[#a855f7] transition transform hover:scale-110"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="hover:text-[#a855f7] transition transform hover:scale-110"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-[#a855f7] transition transform hover:scale-110"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
